@@ -31,11 +31,16 @@ const BoxEmoji = ({emoji, name, id}) => {
         console.log(name)
         emojiSelect = emoji
     } */
-    
+        
     return(
-        <BoxStyle>            
+        <BoxStyle>  
+            <button 
+                onClick={() => {navigator.clipboard.writeText(emoji)}}
+                style={{border: 'none', borderRadius: '10px', height: '2.5rem', fontFamily: 'Segoe Ui', fontSize: '1rem', padding: '0 0.5rem', cursor: 'pointer'}}
+            ><i class="far fa-clipboard"></i> Copy!</button>           
             <Emoji emoji={emoji}/>
-            <NameEmoji emoji={emoji} name={name}/>            
+            <NameEmoji emoji={emoji} name={name}/> 
+                      
         </BoxStyle>
     );
 };
