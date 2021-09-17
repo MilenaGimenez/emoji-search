@@ -6,6 +6,9 @@ import Navbar from './components/Navbar';
 import BoxEmoji from './components/BoxEmoji';
 import styled from 'styled-components';
 
+import emojiList from './emojiList.json';
+console.log(emojiList);
+
 
 function App() {
   useEffect(() => {
